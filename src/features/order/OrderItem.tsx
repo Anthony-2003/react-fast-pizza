@@ -1,6 +1,16 @@
+
 import { formatCurrency } from "../../utils/helpers";
 
-function OrderItem({ item, isLoadingIngredients, ingredients }) {
+export type ItemProps = {
+ item: {
+  name: string;
+  quantity: number;
+  totalPrice: number;
+ } 
+};
+
+
+function OrderItem({ item }:ItemProps) {
   const { quantity, name, totalPrice } = item;
 
   return (
